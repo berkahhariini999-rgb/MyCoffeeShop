@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
-    @State private var isShowing = false
+    @State private var isShowingDetail = false
     
     var categories: [String : [Drink]] {
         .init(
@@ -28,7 +28,12 @@ struct HomeView: View {
                         if let drinks = categories [key] {
                             ForEach(drinks) {
                                 drink in
-                                Text(drink.name)
+                                //Text(drink.name)
+                                DrinkRow(drink){
+                                    viewModel.selectedDrink(drink: drink)
+                                    isShowingDetail = true
+                                }
+                                
                             }
                         }
                     } header: {
@@ -38,8 +43,16 @@ struct HomeView: View {
                 }
                 .navigationTitle("☕️ Home")
                 .task(viewModel.fetchDrinks)
+                .blur(radius: isShowingDetail ? 20 : 0)
+                .disabled(isShowingDetail)
+            }
+            
+            if isShowingDetail {
+                Text("This is the detail view")
             }
         }
+        
+       
        
     }
 }
