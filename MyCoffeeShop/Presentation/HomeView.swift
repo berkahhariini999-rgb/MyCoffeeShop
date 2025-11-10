@@ -47,8 +47,11 @@ struct HomeView: View {
                 .disabled(isShowingDetail)
             }
             
-            if isShowingDetail {
-                Text("This is the detail view")
+               // Text("This is the detail view")
+               if viewModel.selectedDrink != nil && isShowingDetail  {
+                   DrinkDetailView(drink: viewModel.selectedDrink!, isShowingDetail: $isShowingDetail)
+
+                
             }
         }
         
