@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct AccountView: View {
+    @StateObject private var viewModel = AccountViewModel()
+    
+ 
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      
+        NavigationStack {
+            Form {
+                Section("Personal Info") {
+                    TextField("First Name", text:$viewModel.name)
+                    TextField("Address", text:$viewModel.address)
+                    TextField("Mobile", text:$viewModel.mobile)
+                }
+      
+            Section {
+                Button {
+                    // save user details
+                    
+                } label : {
+                    Text("Create User")
+                }
+            }
+            .disabled(viewModel.isInvalidForm())
+        }
+        .navigationTitle("😎 My Account")
+       }
     }
 }
 
