@@ -39,7 +39,7 @@ struct BasketView: View {
                     }
                 if basket.items.isEmpty {
                     //empty view
-                    
+                    EmptyBasketView(message: "You Have No Items in your basket, Please add some..")
                 }
                 
                 }
