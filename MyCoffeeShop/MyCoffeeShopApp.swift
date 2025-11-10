@@ -12,6 +12,7 @@ struct MyCoffeeShopApp: App {
     var body: some Scene {
         WindowGroup {
            AppTabView()
+                .environmentObject(BasketViewModel())
         }
     }
 }
