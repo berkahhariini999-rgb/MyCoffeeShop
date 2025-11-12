@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471682DE2EC2034200A83870 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 471682DD2EC2034200A83870 /* KeychainAccess */; };
 		473D9AFB2EC191F900ADFF34 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 473D9AFA2EC191F900ADFF34 /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				471682DE2EC2034200A83870 /* KeychainAccess in Frameworks */,
 				473D9AFB2EC191F900ADFF34 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +73,7 @@
 			name = MyCoffeeShop;
 			packageProductDependencies = (
 				473D9AFA2EC191F900ADFF34 /* CachedAsyncImage */,
+				471682DD2EC2034200A83870 /* KeychainAccess */,
 			);
 			productName = MyCoffeeShop;
 			productReference = 473FEDD02EBC9A1700E46D58 /* MyCoffeeShop.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				473D9AF92EC191F900ADFF34 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				471682DC2EC2034200A83870 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 473FEDD12EBC9A1700E46D58 /* Products */;
@@ -280,6 +284,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 26.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Iqbal-Alhadad.MyCoffeeShop";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.iqbalalhadad.MyCoffeeShop;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = com.iqbalalhadad.MyCoffeeShop;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=xros*]" = com.iqbalalhadad.MyCoffeeShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -325,6 +332,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 26.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Iqbal-Alhadad.MyCoffeeShop";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.iqbalalhadad.MyCoffeeShop;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = com.iqbalalhadad.MyCoffeeShop;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=xros*]" = com.iqbalalhadad.MyCoffeeShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -364,6 +374,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		471682DC2EC2034200A83870 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		473D9AF92EC191F900ADFF34 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
@@ -375,6 +393,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		471682DD2EC2034200A83870 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 471682DC2EC2034200A83870 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		473D9AFA2EC191F900ADFF34 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 473D9AF92EC191F900ADFF34 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
